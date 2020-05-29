@@ -1,0 +1,20 @@
+<div class="main">
+  <%= form_for @suppliers do |s| %>
+    <%= s.label :企業名 %><br>
+    <%= s.text_field :name %><br>
+    <%= s.label :店舗数 %><br>
+    <%= s.number_field :store %><br>
+    <%= s.label :電話番号 %><br>
+    <%= s.telephone_field :phone_number %><br>
+    <%= s.label :担当者名 %><br>
+    <%= s.text_field :contact_name %><br>
+    <%= s.label :帳合先 %><br>
+    <%= s.text_field :agreement %><br>
+    <%= s.label :帳合先担当者 %><br>
+    <%= s.text_field :agreement_name %><br>
+    <%= s.label :導入アイテム %><br>
+    <%= s.collection_select :product_id, @product, :id, :name %>
+
+  <% end %>
+
+</div>
