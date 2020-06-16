@@ -1,20 +1,23 @@
 <div class="main">
-  <%= form_for @suppliers do |s| %>
-    <%= s.label :企業名 %><br>
-    <%= s.text_field :name %><br>
-    <%= s.label :店舗数 %><br>
-    <%= s.number_field :store %><br>
-    <%= s.label :電話番号 %><br>
-    <%= s.telephone_field :phone_number %><br>
-    <%= s.label :担当者名 %><br>
-    <%= s.text_field :contact_name %><br>
-    <%= s.label :帳合先 %><br>
-    <%= s.text_field :agreement %><br>
-    <%= s.label :帳合先担当者 %><br>
-    <%= s.text_field :agreement_name %><br>
-    <%= s.label :導入アイテム %><br>
-    <%= s.collection_select :product_id, @product, :id, :name %>
+  <%= form_with model: @suppliers do |f| %>
+    <%= f.label :企業名 %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :店舗数 %><br>
+    <%= f.number_field :store %><br>
+    <%= f.label :電話番号 %><br>
+    <%= f.telephone_field :phone_number %><br>
+    <%= f.label :担当者名 %><br>
+    <%= f.text_field :contact_name %><br>
+    <%= f.label :帳合先 %><br>
+    <%= f.text_field :agreement %><br>
+    <%= f.label :帳合先担当者 %><br>
+    <%= f.text_field :agreement_name %><br>
+    <%= f.label :導入アイテム %><br>
+    <%= f.collection_select :product_ids, @products, :id, :name %>
+    <br>
 
+    <%= f.submit :送信 %>
   <% end %>
+  <%= link_to "戻る", root_path %>
 
 </div>
