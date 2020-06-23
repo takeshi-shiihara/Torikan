@@ -1,0 +1,19 @@
+.side-content:hover {
+  background-color: #58677a;
+}
+
+.sidebar {
+  margin-top: 70px;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  background-color: #2f3e51;
+  .sidebar-contents {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    .side-content {
+      padding: 10px 0;
+    }
+  }
+}

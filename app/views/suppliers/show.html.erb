@@ -1,2 +1,19 @@
-<div class="main">
+<%= render 'sidebar' %>
+<div class="main-contents">
+  <div class="contents">
+    <h2>取引先名：<%= @supplier.name %></h2>
+    <p>電話番号：<%= @supplier.phone_number %></p>
+    <p>店舗数：<%= @supplier.store %></p>
+    <p>担当者：<%= @supplier.contact_name %></p>
+    <p>帳合先:<%= @supplier.agreement %>
+    <p>帳合先担当者：<%= @supplier.agreement_name %>
+    <p>導入アイテム：</p>
+    <div class="introduction_item">
+      <% @supplier.products.each do |product| %>
+        <div><%= product.name %></div>
+      <% end %>
+    </div>
+    <br>
+    <%= link_to '戻る', root_path %>
+  </div>
 </div>

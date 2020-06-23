@@ -1,3 +1,28 @@
+header {
+  height: 70px;
+  background-color: #052c5f;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  .title-link {
+    text-decoration: none;
+    .title {
+      color: #fff;
+      font-size: x-large;
+      padding: 13px;
+    }
+  }
+  .supplier_search {
+    margin: 18px;
+  }
+}
+
 .main {
-  
+  .main-contents {
+    padding-top: 70px;
+    margin-left: 250px;
+    .contents {
+      margin-left: 20px;
+    }
+  }
 }

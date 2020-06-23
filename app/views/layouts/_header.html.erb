@@ -1,0 +1,9 @@
+<header>
+  <%= link_to(root_path, class: 'title-link') do %>
+    <p class="title">Torikan</p>
+  <% end %>
+  <%= search_form_for(@q, url:search_suppliers_path) do |f| %>
+    <%= f.search_field :name_cont, class: 's-form', placeholder: '取引先を入力してください' %>
+    <%= f.submit class: 'search-btn' %>
+  <% end %>
+</header>

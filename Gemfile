@@ -56,3 +56,4 @@ gem 'dotenv-rails'
 gem 'rb-readline', :require=>true
 gem 'pry-rails'
 gem 'cocoon'
+gem 'ransack'
