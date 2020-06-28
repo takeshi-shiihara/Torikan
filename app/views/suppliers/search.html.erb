@@ -8,7 +8,13 @@
     <div class="search-result-number">
       <%= @suppliers.length %>件の表示
     </div>
-
+    <div class="supplier-box">
+      <% @suppliers.each do |supplier| %>
+        <div class="one-box">
+          <%= link_to "#{supplier.name}", supplier_path(supplier) %>
+        </div>
+      <% end %>
+    </div>
     
   </div>
 </div>

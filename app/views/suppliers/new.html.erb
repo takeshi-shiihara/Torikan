@@ -3,30 +3,7 @@
 <div class="main-contents">
   <div class="contents">
     <h2>取引先新規登録</h2>
-    <%= form_with(model: @suppliers, class: 'supplier-form') do |f| %>
-      <%= f.label :企業名 %><br>
-      <%= f.text_field :name %><br>
-      <%= f.label :店舗数 %><br>
-      <%= f.number_field :store %><br>
-      <%= f.label :電話番号 %><br>
-      <%= f.telephone_field :phone_number %><br>
-      <%= f.label :担当者名 %><br>
-      <%= f.text_field :contact_name %><br>
-      <%= f.label :帳合先 %><br>
-      <%= f.text_field :agreement %><br>
-      <%= f.label :帳合先担当者 %><br>
-      <%= f.text_field :agreement_name %><br>
-      <%= f.label :導入アイテム %><br>
-      <%= f.collection_check_boxes :product_ids, @products, :id, :name do |b| %>
-        <div>
-          <%= b.check_box + b.label { b.text } %>
-        </div>
-      <% end %>
-      
-      <br>
-
-      <%= f.submit :送信 %>
-    <% end %>
+    <%= render 'form'%>
     <br>
     <%= link_to "戻る", root_path %>
   </div>
