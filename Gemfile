@@ -57,3 +57,5 @@ gem 'rb-readline', :require=>true
 gem 'pry-rails'
 gem 'cocoon'
 gem 'ransack'
+gem 'carrierwave'
+gem 'mini_magick'

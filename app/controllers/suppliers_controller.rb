@@ -6,7 +6,7 @@ class SuppliersController < ApplicationController
   end
 
   def show
-    @supplier = Supplier.find(params[:id])
+    @supplier = Supplier.eager_load(:products).find(params[:id])
     @q = Supplier.ransack(params[:q])
   end
 
@@ -26,6 +26,8 @@ class SuppliersController < ApplicationController
   end
 
   def edit
+    @q = Supplier.ransack(params[:q])
+    @supplier = Supplier.find(params[:id])
   end
 
   def update

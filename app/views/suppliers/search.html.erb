@@ -1,0 +1,14 @@
+<%= render 'sidebar' %>
+<div class="main-contents">
+  <div class="contents">
+    <h2 class="search-result">
+      <%= params[:value] %>
+      <span class="search-result-text">検索結果</span>
+    </h2>
+    <div class="search-result-number">
+      <%= @suppliers.length %>件の表示
+    </div>
+
+    
+  </div>
+</div>
